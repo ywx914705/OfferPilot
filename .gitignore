@@ -12,3 +12,7 @@ Thumbs.db
 # Temp
 *.tmp
 *.bak
+
+# AI Tool Cache
+.lingma/cache/
+.tongyiignore

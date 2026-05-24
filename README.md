@@ -92,11 +92,72 @@ code OfferPilot
 > 分析我的项目 /path/to/my-project
 ```
 
-**Trae**
+**Trae IDE**
 
 ```bash
-# 用 Trae 打开项目文件夹，直接对话
+# 用 Trae IDE 打开项目文件夹，直接对话
+# 项目规则文件 .trae/rules/project_rules.md 自动生效
 > 还有2周面试，帮我规划C++后端备考计划
+```
+
+**Trae 插件（VS Code / JetBrains）**
+
+```bash
+# 安装 Trae 插件后，在设置中添加项目规则
+# 规则文件：.trae/rules/project_rules.md
+# 或在 AI 对话窗口 → 设置 → 规则 → 导入 INTERVIEW.md
+> 帮我准备测试开发面试
+```
+
+**通义灵码（VS Code / JetBrains / Lingma IDE）**
+
+```bash
+# 用 Lingma IDE 或安装通义灵码插件后打开项目
+# 项目规则文件 .lingma/rules/offerpilot.md 自动生效
+# 也可在设置 → 规则 → 添加规则 → 类型选"始终生效" → 粘贴 INTERVIEW.md 内容
+> 帮我准备阿里Java后端校招面试
+```
+
+**CodeGeeX（VS Code / JetBrains）**
+
+```bash
+# 安装 CodeGeeX 插件后打开项目
+# 在设置中添加自定义 Prompt 模板，指向 INTERVIEW.md
+# 或在交互模式中直接输入："基于 INTERVIEW.md 的规则，帮我准备面试"
+> 帮我准备前端面试
+```
+
+**豆包 MarsCode IDE**
+
+```bash
+# 在 MarsCode IDE 中打开项目
+# 在 AI 助手设置中添加项目规则，粘贴 INTERVIEW.md 内容
+> 帮我准备字节C++后端实习面试
+```
+
+**DevEco CodeGenie（华为鸿蒙开发）**
+
+```bash
+# 用 DevEco Studio 打开项目
+# 项目规则文件 .codegenie/project_rule.md 自动生效
+# 或在 CodeGenie 设置 → Rules → Import Rule 导入
+> 帮我准备嵌入式面试
+```
+
+**WorkBuddy（腾讯 CodeBuddy 桌面版）**
+
+```bash
+# 方式一：安装 Skill（推荐）
+# 1. 将 skills/offerpilot/ 文件夹复制到 WorkBuddy 技能目录
+#    Windows: C:\Users\你的用户名\WorkBuddy\Claw\skills\offerpilot\
+# 2. 在 WorkBuddy 中执行 /reload offerpilot
+# 3. 直接对话即可触发
+> 帮我准备面试
+
+# 方式二：全局规则
+# 在 C:\Users\你的用户名\.workbuddy\USER.md 中添加规则
+# 将 INTERVIEW.md 的内容复制到 USER.md 中
+> 帮我准备字节C++后端实习面试
 ```
 
 **ChatGPT / Claude 网页版（零配置）**
@@ -206,6 +267,7 @@ codex "帮我准备字节Java后端实习面试"
 |                                                   |
 |   INTERVIEW.md  .cursorrules                      |
 |   CLAUDE.md     .clinerules                       |
+|   .trae/rules/  .lingma/rules/  .codegenie/       |
 |                                                   |
 |   系统配置 + 触发规则 + 岗位映射                    |
 |   + 输出格式 + 异常处理                            |
@@ -438,6 +500,10 @@ OfferPilot/
 +-- CLAUDE.md                 # Claude Code 适配
 +-- .cursorrules              # Cursor 适配
 +-- .clinerules               # Cline 适配
++-- .trae/rules/              # Trae IDE / Trae 插件适配
++-- .lingma/rules/            # 通义灵码适配
++-- .codegenie/               # DevEco CodeGenie 适配
++-- skills/offerpilot/        # WorkBuddy Skill 适配
 +-- LICENSE                   # MIT 许可证
 +-- .gitignore
 +-- .github/
